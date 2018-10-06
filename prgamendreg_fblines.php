@@ -39,8 +39,18 @@ $forename=$sql_array->mem_forename;
 $password=$sql_array->mem_password;
 $email=$sql_array->mem_email;
 $sex=$sql_array->mem_sex;
+
 $skype_settings=$sql_array->mem_skypeset;
 $skype_name=$sql_array->mem_skype;
+
+//yoes 20181006
+$facebook_settings=$sql_array->mem_facebookset;
+$facebook_name=$sql_array->mem_facebook;
+$line_settings=$sql_array->mem_lineset;
+$line_name=$sql_array->mem_line;
+
+
+
 $day=trim(substr($sql_array->mem_dob,8,2));
 $month=trim(substr($sql_array->mem_dob,5,2));
 $year=trim(substr($sql_array->mem_dob,2,2));
@@ -205,6 +215,49 @@ $rows=($option_manager->GetValue('skype'))?8:10;
           </tr>
               <?}?>
               <!-- SKYPE -->
+			  
+			  
+			  
+			  
+			  
+			  <!-- Facebook -->
+				  <tr >
+					<td  align="left" class="tdodd">Facebook ID</td>
+					<td align="left" class="tdodd" > <input type="text" class="input" name="txtFacebookname" size="20" maxlength='45' value="<?php print("$facebook_name"); ?>" ></td>
+				  </tr>
+				  <tr >
+					<td  align="left" class="tdodd">Facebook Setting</td>
+					<td align="left" class="tdodd" >              
+					<select class="input" name="lstFacebookSettings" id="lstFacebookSettings" size="1"  style="width:auto;">
+						<option value="0" >- <?php echo GENERAL_CHOOSE?> -</option>
+						<option value="ALL" <?if('ALL'==$facebook_settings) {echo " SELECTED";}?>>Show to anyone</option>
+						<option value="HOTLIST" <?if('HOTLIST'==$facebook_settings) {echo " SELECTED";}?>>Show only to my favoritess</option>
+					  </select>
+					</td>
+				  </tr>
+              <!-- Facebook -->
+			  
+			  
+			  
+			   <!-- Line -->
+				  <tr >
+					<td  align="left" class="tdodd">Line ID</td>
+					<td align="left" class="tdodd" > <input type="text" class="input" name="txtLinename" size="20" maxlength='45' value="<?php print("$line_name"); ?>" ></td>
+				  </tr>
+				  <tr >
+					<td  align="left" class="tdodd">Line Setting</td>
+					<td align="left" class="tdodd" >              
+					<select class="input" name="lstLineSettings" id="lstLineSettings" size="1"  style="width:auto;">
+						<option value="0" >- <?php echo GENERAL_CHOOSE?> -</option>
+						<option value="ALL" <?if('ALL'==$line_settings) {echo " SELECTED";}?>>Show to anyone</option>
+						<option value="HOTLIST" <?if('HOTLIST'==$line_settings) {echo " SELECTED";}?>>Show only to my favoritess</option>
+					  </select>
+					</td>
+				  </tr>
+              <!-- Line -->
+			  
+			  
+			  
           <tr >
             <td  align="left" valign="top" class="tdeven"><?php echo REGISTER_NEWSLETER?></td>
             <td  align="left" class="tdeven">

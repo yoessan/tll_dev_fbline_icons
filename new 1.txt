@@ -1,0 +1,6 @@
+//yoes 2018106 -- add fields for FB+Line
+$lstFacebookSettings= substr($_POST['lstFacebookSettings'],0,10);
+$txtFacebookname= doCleanInput($_POST['txtFacebookname']);
+
+$lstLineSettings= substr($_POST['lstLineSettings'],0,10);
+$txtLinename= doCleanInput($_POST['txtLinename']);
