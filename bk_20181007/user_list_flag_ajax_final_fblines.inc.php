@@ -168,7 +168,7 @@
 			<?php 
 				// yoes 20181006
 				//-----1-3. Line icon-----------------
-				include("line.inc.php"); 
+				//include("line.inc.php"); 
 			?>
             
             

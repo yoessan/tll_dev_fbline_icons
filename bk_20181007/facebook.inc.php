@@ -27,7 +27,7 @@ if (mysql_num_rows($premium_test) < 1){
 			if ($facebook_auth && $Sess_Userlevel == 'gold') { ?>
 				
 				
-				<a href="https://www.facebook.com/<?=$sql_array->mem_facebook?>" target="_blank" title="View <?=$sql_array->mem_forename?>'s Facebook Profile">
+				<a href="..." title="View <?=$sql_array->mem_forename?>'s Facebook Profile">
 					<img src="./skins/green/images/facebook_premium.gif" alt="View <?=$sql_array->mem_forename?>'s Facebook Profile" width="23" height="22" border="0" align=absmiddle />
 				</a>
 
@@ -43,7 +43,7 @@ if (mysql_num_rows($premium_test) < 1){
 
 			<?php }?> 
 		
-		<?php }else{?>
+		<?php}else {?>
 			
 			<a href="<?=$CONST_LINK_ROOT?>/joinreg.php?userid=<?=$sql_array->adv_userid?>" title="View <?=$sql_array->mem_forename?>'s Facebook Profile">
 				<img src="./skins/green/images/facebook_premium.gif" width="23" height="22"  border=0 / align="absmiddle">
@@ -52,5 +52,4 @@ if (mysql_num_rows($premium_test) < 1){
 		<? }?>
 		
 	<? }?>
-	
 <? }?>

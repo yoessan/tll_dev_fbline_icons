@@ -35,7 +35,7 @@ $pager->SetUrl("$CONST_LINK_ROOT/$page_name?gender=".$gender);
 
 //----
 
-	$desired_column = "adv_userid, mem_userid, mem_forename, gcn_name,gst_name,gct_name, adv_sex, adv_title, adv_comment, adv_username, adv_expiredate, adv_createdate, (YEAR(CURDATE())-YEAR(adv_dob)) - (RIGHT(CURDATE(),5) < RIGHT(adv_dob,5)) AS age, unix_timestamp(mem_timeout) AS session_active, mem_timeout, mem_skypeset, mem_skype, mem_facebook, mem_facebookset, mem_line, mem_lineset";
+	$desired_column = "adv_userid, mem_userid, mem_forename, gcn_name,gst_name,gct_name, adv_sex, adv_title, adv_comment, adv_username, adv_expiredate, adv_createdate, (YEAR(CURDATE())-YEAR(adv_dob)) - (RIGHT(CURDATE(),5) < RIGHT(adv_dob,5)) AS age, unix_timestamp(mem_timeout) AS session_active, mem_timeout, mem_skypeset, mem_skype";
 
 
 
@@ -127,7 +127,7 @@ foreach ($result as $sql_array) {
 	$adv->InitByObject($sql_array);
 	$adv->SetImage('small');
 	$sql_array = $adv;
-	include("user_list_flag_ajax_final_fblines.inc.php");
+	include("user_list_flag_ajax_final.inc.php");
 	
 	$total_adverts_on_page++;
 }
@@ -166,12 +166,6 @@ foreach ($result as $sql_array) {
 <?php
 
 	include "list_js_popups.php";
-	
 ?>
-
-
-<div id='line_popup' name='line_popup' style='position: absolute; width: 240px; height: 290px;  background: #ddd; <?php //display: none;?>  '>
-	<?php include "./myemail6_line.php";?>
-</div>
          
 <?php include "analytics.php"; ?>

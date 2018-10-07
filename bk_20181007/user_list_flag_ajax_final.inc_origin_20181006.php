@@ -157,19 +157,6 @@
             <?php //-----1. skype icon-----------------
 				include("skype.inc.php"); 
 			?>
-			
-			
-			<?php 
-				// yoes 20181006
-				//-----1-2. facebook icon-----------------
-				include("facebook.inc.php"); 
-			?>
-			
-			<?php 
-				// yoes 20181006
-				//-----1-3. Line icon-----------------
-				include("line.inc.php"); 
-			?>
             
             
 		<?php 
